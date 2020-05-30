@@ -1,5 +1,5 @@
 #---------------------------------
-# Improvement: Add status
+# Bar Chart Race on Malaysia Confirmed Cases of Covid-19 by states
 #---------------------------------
 
 import pandas as pd

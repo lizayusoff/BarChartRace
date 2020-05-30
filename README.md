@@ -5,7 +5,7 @@ The codes were originally based on codes written by Pratap Vardhan from https://
 
 However, I find that the transition of the bars were not as smooth (view here: https://youtu.be/zCz97uEaxIY). Therefore,some modification were made based on tutorial by Ted Petrou from https://medium.com/dunder-data/create-a-bar-chart-race-animation-in-python-with-matplotlib-477ed1590096
 
-Petrou extrapolated couples of new data in between 2 days, thus creating a smooth transition.
+Petrou interpolated couples of new data in between 2 days, thus creating a smooth transition.
 
 The data were manually populated From the Desk of the Director-General of Health Malaysia at https://kpkesihatan.com/. This website publish the press statement from the Ministry of Health Malaysa, updating on the Coronavirus disease 2019 situation in Malaysia which is done everyday at 5pm, local time.
 

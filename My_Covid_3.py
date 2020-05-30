@@ -1,5 +1,5 @@
 #---------------------------------
-# Bar Chart Race on Malaysia Confirmed Cases of Covid-19 by states
+# Bar Chart Race for Covid-19 confirmed cases in Malaysia by States
 #---------------------------------
 
 import pandas as pd
@@ -7,21 +7,12 @@ from matplotlib.animation import FuncAnimation
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-
-colors = plt.cm.Paired(range(10))
-
-df = pd.read_csv('daily_MY_covid_wide.csv', index_col='Date', parse_dates=['Date'], infer_datetime_format=True)
-df_status = pd.read_csv('daily_MY_status.csv', index_col='Date', parse_dates=['Date'], infer_datetime_format=True)
-
-
-
 def nice_axes(ax):
     ax.set_facecolor('w')
     ax.tick_params(axis='x', colors='#777777', labelsize=12)
     ax.grid(which='major', axis='x', linestyle='-')
     ax.set_axisbelow(True)
     [spine.set_visible(False) for spine in ax.spines.values()]
-
 
 def prepare_data(df, steps=5):
     df = df.reset_index()
@@ -35,13 +26,9 @@ def prepare_data(df, steps=5):
     df_rank_expanded = df_rank_expanded.interpolate()
     return df_expanded, df_rank_expanded
 
-df_expanded, df_rank_expanded = prepare_data(df)
-
 def init():
     ax.clear()
     nice_axes(ax)
-   # ax.set_ylim(.2, 6.8)
-
 
 def update(i):
 
@@ -92,12 +79,20 @@ def update(i):
             weight=750)
     ax.text(0.96, 0.35, str(status_str), transform=ax.transAxes, color='#777777', size=16, ha='right',
             weight=500)
-    ax.text(1, 0, 'by @RedChilLiz; credit @TedPetrou, @pratapvardhan', transform=ax.transAxes, color='#777777',
-            ha='right',
+    ax.text(1, 0, 'Prepared by @LizaYusoff\n Credit to @TedPetrou, @pratapvardhan\n Data were manually populated from https://kpkesihatan.com/',
+            transform=ax.transAxes, color='#777777', ha='right',
             bbox=dict(facecolor='white', alpha=0.8, edgecolor='white'))
+
     plt.box(False)
     plt.axis('tight')
 
+
+colors = plt.cm.Paired(range(10))
+
+df = pd.read_csv('daily_MY_covid_wide.csv', index_col='Date', parse_dates=['Date'], infer_datetime_format=True)
+df_status = pd.read_csv('daily_MY_status.csv', index_col='Date', parse_dates=['Date'], infer_datetime_format=True)
+
+df_expanded, df_rank_expanded = prepare_data(df)
 
 fig, ax = plt.subplots(figsize=(15, 8))
 

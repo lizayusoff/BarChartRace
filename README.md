@@ -3,7 +3,7 @@ A barchart race of Covid-19 confirmed cases in Malaysia by States
 
 The codes were originally based on codes written by Pratap Vardhan from https://github.com/pratapvardhan/notebooks/blob/master/barchart-race-matplotlib.ipynb
 
-However, I find that the transition of the bars were not as smooth. Therefore some modification were made based on tutorial by Ted Petrou from https://medium.com/dunder-data/create-a-bar-chart-race-animation-in-python-with-matplotlib-477ed1590096
+However, I find that the transition of the bars were not as smooth (view here: https://www.youtube.com/watch?v=zCz97uEaxIY). Therefore,some modification were made based on tutorial by Ted Petrou from https://medium.com/dunder-data/create-a-bar-chart-race-animation-in-python-with-matplotlib-477ed1590096
 
 Petrou extrapolated couples of new data in between 2 days, thus creating a smooth transition.
 

@@ -44,7 +44,7 @@ def update(i):
 
     date_str = df_expanded.index[i].strftime('%B %d, %Y')
     status_str = df_status['Status'].loc[df_expanded.index[i]]
-
+    date_end = df_expanded.last_valid_index().strftime('%B %d, %Y')
 
 
     # Add counts on the right of the bar graphs
@@ -79,8 +79,12 @@ def update(i):
             weight=750)
     ax.text(0.96, 0.35, str(status_str), transform=ax.transAxes, color='#777777', size=16, ha='right',
             weight=500)
-    ax.text(1, 0, 'Prepared by @LizaYusoff\n Credit to @TedPetrou, @pratapvardhan\n Data were manually populated from https://kpkesihatan.com/',
+    ax.text(1, -0.05, 'Prepared by @LizaYusoff\n Credit to @TedPetrou, @pratapvardhan',
             transform=ax.transAxes, color='#777777', ha='right',
+            bbox=dict(facecolor='white', alpha=0.8, edgecolor='white'))
+    ax.text(0, -0.05,
+            'Data updated until %s \nData were manually populated from https://kpkesihatan.com/' % date_end,
+            transform=ax.transAxes, color='#777777', ha='left',
             bbox=dict(facecolor='white', alpha=0.8, edgecolor='white'))
 
     plt.box(False)

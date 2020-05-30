@@ -8,5 +8,3 @@ However, I find that the transition of the bars were not as smooth. Therefore so
 Petrou extrapolated couples of new data in between 2 days, thus creating a smooth transition.
 
 The data were manually populated From the Desk of the Director-General of Health Malaysia at https://kpkesihatan.com/. This website publish the press statement from the Ministry of Health Malaysa, updating on the Coronavirus disease 2019 situation in Malaysia which is done everyday at 5pm, local time.
-
-Liza Yusoff

@@ -1,4 +1,5 @@
 #---------------------------------
+# Bar Chart Race for Covid-19 confirmed cases in Malaysia by States
 #---------------------------------
 
 import pandas as pd
